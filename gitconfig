@@ -1,0 +1,7 @@
+[user]
+	name = Matthias Petri
+	email = Matthias.Petri@gmail.com
+[core]
+	excludesfile = ~/.gitignore
+[color]
+	ui = true
