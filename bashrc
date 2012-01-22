@@ -1,8 +1,8 @@
 # .bashrc
 
 # Source global definitions
-if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
+if [ -f /etc/bash.bashrc ]; then
+	. /etc/bash.bashrc
 fi
 
 if [[ $- != *i* ]] ; then
@@ -100,6 +100,13 @@ shopt -s checkwinsize
 if [ -f ~/.dir_colors ]; then
     eval `dircolors ~/.dir_colors`
 fi 
+
+
+# enable bash completion in interactive shells
+if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+    . /etc/bash_completion
+fi
+
 
 alias ls='ls --color=auto'
 alias vi='vim'
