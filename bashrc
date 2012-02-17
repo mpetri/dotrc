@@ -114,5 +114,9 @@ alias grep='grep --color=auto'
 
 export GIT_EDITOR=$EDITOR
 
+# go stuff
+export GOROOT=$HOME/src/go
+export GOARCH=amd64
+export GOOS=linux
 
 
