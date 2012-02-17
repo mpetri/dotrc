@@ -10,8 +10,13 @@ if [[ $- != *i* ]] ; then
          return
 fi
 
+# go stuff
+export GOROOT=$HOME/src/go
+export GOARCH=amd64
+export GOOS=linux
+
 # User specific aliases and functions
-export PATH="~/bin/:/bin/:/usr/bin:/usr/local/bin"
+export PATH="~/bin/:/bin/:/usr/bin:/usr/local/bin:$GOROOT/bin"
 export TERM=xterm-256color
 export PS1="[\[\033[1;34m\w\[\033[0m]\n[\t \u]$ "
 export EDITOR=vim
@@ -114,9 +119,5 @@ alias grep='grep --color=auto'
 
 export GIT_EDITOR=$EDITOR
 
-# go stuff
-export GOROOT=$HOME/src/go
-export GOARCH=amd64
-export GOOS=linux
 
 
