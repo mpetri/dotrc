@@ -14,6 +14,7 @@ fi
 export GOROOT=$HOME/src/go
 export GOARCH=amd64
 export GOOS=linux
+export GOPATH=$HOME/godev
 
 # User specific aliases and functions
 export PATH="~/bin/:/bin/:/usr/bin:/usr/local/bin:$GOROOT/bin"
