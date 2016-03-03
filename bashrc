@@ -10,20 +10,21 @@ if [[ $- != *i* ]] ; then
          return
 fi
 
-# go stuff
-export GOROOT=$HOME/src/go
-export GOARCH=amd64
-export GOOS=linux
-export GOPATH=$HOME/godev
 
 # User specific aliases and functions
-export PATH="~/bin/:/bin/:/usr/bin:/usr/local/bin:$GOROOT/bin"
+# Export environment variables
+export LANG="en_US.utf8"
+export LC_ALL="en_US.utf8"
+export PATH="~/bin/:/bin/:/usr/bin:/usr/local/bin"
 export TERM=xterm-256color
 export PS1="[\[\033[1;34m\w\[\033[0m]\n[\t \u]$ "
 export EDITOR=vim
-export HISTFILESIZE=3000
-export HISTCONTROL=ignoredups
+export HISTSIZE=500000
+export HISTFILESIZE=100000
+export HISTCONTROL="erasedups:ignoreboth"
 export HISTIGNORE='&:clear:ls:cd:[bf]g:exit:[ t\]*'
+# Useful timestamp format
+export HISTTIMEFORMAT='%F %T '
 shopt -s histappend
 
 bash_prompt_command() {
@@ -95,12 +96,19 @@ bash_prompt
 unset bash_prompt
 
 ### Bash options
+# Save multi-line commands as one command
+shopt -s cmdhist
 #fix spelling
 shopt -s cdspell
+shopt -s dirspell
 #makes bash append to history rather than overwrite
 shopt -s histappend
 #make bash check window after each command
 shopt -s checkwinsize
+# Prevent file overwrite on stdout redirection
+set -o noclobber
+# Automatically trim long paths in the prompt (requires Bash 4.x)
+PROMPT_DIRTRIM=2
 
 #more colors!
 if [ -f ~/.dir_colors ]; then

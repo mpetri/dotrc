@@ -3,5 +3,15 @@
 	email = Matthias.Petri@gmail.com
 [core]
 	excludesfile = ~/.gitignore
+	autocrlf = input
+	eol = lf
 [color]
 	ui = true
+	diff = true
+[push]
+	default = simple
+[help]
+	autocorrect = 1
+[i18n]
+	logoutputencoding = utf8
+	commitencoding = utf8
