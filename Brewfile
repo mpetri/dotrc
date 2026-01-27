@@ -120,7 +120,6 @@ cask "obsidian"
 cask "zoom"
 
 cask "claude-code"
-cask "warp"
 cask "cursor"
 cask "codex"
 cask "zed"
