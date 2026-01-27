@@ -1,5 +1,7 @@
 
+
 # CLI Essentials
+brew 'uv'
 brew 'git'          # Version controll
 brew 'neovim'       # Text editor
 brew 'tmux'         # Term multiplexer
@@ -12,7 +14,10 @@ brew 'ripgrep'
 brew 'starship'
 brew 'atuin'
 brew 'awscli'
+brew 'azure-cli'
 brew 'git-lfs'
+brew 'btop'
+brew 'yt-dlp'
 
 
 
@@ -86,6 +91,7 @@ brew 'openssl'        # Cryptography and SSL/TLS Toolkit
 
 cask 'spotify', args: { require_sha: false } # Propietary music streaming
 cask 'vlc'          # Media player
+cask 'iina'
 brew 'pandoc'       # Universal file converter
 
 # Browsers
@@ -100,14 +106,12 @@ cask 'bitwarden'
 cask 'font-fira-code'
 cask 'font-hack'
 cask 'font-inconsolata'
-cask 'font-meslo-lg-nerd-font'
 
 # Mac OS Mods and Imrovments
 cask 'alt-tab'        # Much better alt-tab window switcher
 cask 'raycast', args: { require_sha: false }  # Spotlight alternative
 cask 'shottr'         # Better screenshot utility
 
-cask 'little-snitch'  # Firewall app viewing / blocking traffic
 cask 'keka'           # File archiver and extractor
 
 cask "notion"
@@ -141,3 +145,9 @@ cask 'whatsapp'
 cask 'antigravity'
 cask 'jordanbaird-ice'
 cask 'keepingyouawake'
+cask 'helium-browser'
+cask 'discord'
+cask 'popclip'
+cask 'bloom'
+cask 'windsurf'
+cask 'gcloud-cli'
